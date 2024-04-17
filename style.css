@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+    background: #25233b;
+}
+#home{
+    display: flex;
+    flex-direction: row;
+    padding: 80px 80px;
+}
+#content{
+    width: 60%;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+}
+#content h3{
+    font-size: 1.5rem;
+    color: #fff;
+
+}
+#content h2{
+    font-size: 4rem;
+    font-weight: 8rem;
+    color: #0966f1;
+}
+.images{
+    width: 400px;
+    height: 100px;
+}
+.images img{
+    width: 100%;
+}
+.clock{
+    display: flex;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #0c182a;
+}
+.number{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    transform: rotate(calc(30deg  * var(--a)));
+    inset: 20px;
+}
+.number span{
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--a)));
+}
+.center{
+    width: 15px;
+    height: 15px;
+    background:linear-gradient(30deg, blue, pink);
+    position: absolute;
+    border-radius: 50%;
+    
+}
+.hour, .minute,.second{
+    --rotate:0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+    transform-origin: bottom;
+}
+.hour{
+    width: 10px;
+    height: 100px;
+    background:rgb(0, 255, 51);
+    border-radius: 50px;
+}
+.minute{
+    width: 8px;
+    height: 140px;
+    background:rgb(255, 0, 0);
+    border-radius: 50px;
+}
+.second{
+    width: 5px;
+    height: 160px;
+    background:#ffffff;   
+    border-radius: 50px ;
+}
+.clock::before{
+    content: "";
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ffffff;
+    border: 5px solid #ffffff;
+    background: linear-gradient(90deg, blue, #62184c);
+}
